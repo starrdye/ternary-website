@@ -1,0 +1,642 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Funds Section Styles */
+.funds-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.funds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.fund-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fund-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.fund-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.fund-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.fund-info-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.fund-info-btn:hover {
+    background-color: #004080;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 14px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #004080;
+}
+
+/* Fund Hero Section Styles */
+.fund-hero-section {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.fund-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.fund-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+}
+
+.fund-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.fund-hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Fund Intro Section Styles */
+.fund-intro-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.fund-intro-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.fund-intro-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Fund Stats Section Styles */
+.fund-stats-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.fund-stats-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #003366;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #003366;
+}
+
+/* Performance Section Styles */
+.performance-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.performance-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #003366;
+    text-align: center;
+}
+
+.performance-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.performance-metrics h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.performance-metrics ul {
+    list-style: none;
+}
+
+.performance-metrics li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Comparative Section Styles */
+.comparative-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.comparative-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #003366;
+    text-align: center;
+}
+
+.comparative-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Investment Process Section Styles */
+.investment-process-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.investment-process-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #003366;
+    text-align: center;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.process-step {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.process-step h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.process-step p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .funds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fund-card {
+        padding: 20px;
+    }
+
+    .fund-hero-section {
+        height: 300px;
+    }
+
+    .fund-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .performance-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .funds-section {
+        padding: 40px 0;
+    }
+
+    .fund-hero-section {
+        height: 250px;
+    }
+
+    .fund-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .fund-intro-section,
+    .fund-stats-section,
+    .performance-section,
+    .comparative-section,
+    .investment-process-section {
+        padding: 40px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Chart Container Responsive */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-container {
+        height: 250px;
+    }
+}
+
+/* Chat Bot Styles */
+.chat-bot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.chat-bot-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.chat-bot-button:hover {
+    background-color: #004080;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 51, 102, 0.4);
+}
+
+.chat-bot-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-bot-window.active {
+    display: flex;
+}
+
+.chat-bot-header {
+    background-color: #003366;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-bot-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chat-bot-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-bot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #e6e6e6;
+    padding: 10px 15px;
+    border-radius: 18px 18px 18px 4px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 18px 18px 4px 18px;
+    margin-left: auto;
+}
+
+.chat-bot-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+.chat-bot-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.chat-bot-input button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dummy-prompts {
+    padding: 10px 0;
+}
+
+.dummy-prompt {
+    display: inline-block;
+    background-color: #e6e6e6;
+    padding: 8px 12px;
+    border-radius: 16px;
+    margin: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dummy-prompt:hover {
+    background-color: #d6d6d6;
+}
+
+/* Chat Bot Responsive */
+@media (max-width: 768px) {
+    .chat-bot-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chat-bot-window {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-bot-window {
+        width: 280px;
+        height: 350px;
+    }
+}

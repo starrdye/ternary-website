@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Cypress Fund - Investment Strategy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://static.wixstatic.com/media/203a8c_8e8bc89139334c52b4c0c1089f931bed~mv2.png/v1/fill/w_184,h_31,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CREATIVEANS_TERNARY_MASTER%20LOGO%20(DARK%20BLUE)_RGB%20copy_edited_edited.png" alt="Ternary Fund Management">
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Back to Funds Index</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fund-hero-section">
+            <div class="fund-hero-bg">
+                <img src="https://static.wixstatic.com/media/203a8c_34c320ea392e47fdb6fc2c0880a23059~mv2.png/v1/fill/w_1333,h_601,al_c,lg_1,enc_avif,quality_auto/203a8c_34c320ea392e47fdb6fc2c0880a23059~mv2.png" alt="Ternary Cypress Fund">
+            </div>
+            <div class="fund-hero-content">
+                <h1>Ternary Cypress Fund</h1>
+            </div>
+        </section>
+
+        <section class="fund-intro-section">
+            <div class="container">
+                <div class="fund-intro-content">
+                    <h2>Investment Strategy</h2>
+                    <p>Ternary Cypress Fund deploys a value investing strategy, trading public equities in which the underlying asset value exceeds the market value of the stock in undervalued industries. Our approach focuses on identifying companies with strong fundamentals, solid management teams, and sustainable competitive advantages that are currently trading below their intrinsic value.</p>
+                    <p>We conduct thorough fundamental analysis, including financial statement analysis, industry research, and competitive positioning to identify these undervalued opportunities. Our investment process is disciplined and research-driven, ensuring that we only invest in companies that meet our strict valuation criteria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fund-stats-section">
+            <div class="container">
+                <h2>Key Fund Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Minimum Subscription</h3>
+                        <p class="stat-value">$100,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Management Fee</h3>
+                        <p class="stat-value">1.5%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Performance Fee</h3>
+                        <p class="stat-value">20%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Lock-up Period</h3>
+                        <p class="stat-value">1 Year</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Redemption Frequency</h3>
+                        <p class="stat-value">Quarterly</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Fund Inception</h3>
+                        <p class="stat-value">2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="performance-section">
+            <div class="container">
+                <h2>Past Performance</h2>
+                <div class="performance-content">
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                    <div class="performance-metrics">
+                        <h3>Performance Metrics</h3>
+                        <ul>
+                            <li><strong>1-Year Return:</strong> 18.5%</li>
+                            <li><strong>3-Year Return:</strong> 24.2%</li>
+                            <li><strong>5-Year Return:</strong> 29.7%</li>
+                            <li><strong>Sharpe Ratio:</strong> 1.8</li>
+                            <li><strong>Max Drawdown:</strong> 12.3%</li>
+                            <li><strong>Alpha:</strong> 4.2%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparative-section">
+            <div class="container">
+                <h2>Comparative Analysis</h2>
+                <div class="chart-container">
+                    <canvas id="comparativeChart"></canvas>
+                </div>
+                <div class="comparative-note">
+                    <p>Comparison against S&P 500 and MSCI World Index</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="investment-process-section">
+            <div class="container">
+                <h2>Investment Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Screening</h3>
+                        <p>Identify potential investment opportunities using quantitative screening tools and valuation metrics.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Fundamental Analysis</h3>
+                        <p>Conduct in-depth analysis of financial statements, industry trends, and competitive positioning.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Valuation</h3>
+                        <p>Determine intrinsic value using discounted cash flow analysis and other valuation methodologies.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Portfolio Construction</h3>
+                        <p>Build a diversified portfolio of undervalued securities with appropriate risk management.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3>Monitoring</h3>
+                        <p>Continuously monitor investments and adjust portfolio as market conditions change.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Ternary Fund Management Pte Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Performance Chart
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(performanceCtx, {
+            type: 'line',
+            data: {
+                labels: ['2022 Q1', '2022 Q2', '2022 Q3', '2022 Q4', '2023 Q1', '2023 Q2', '2023 Q3', '2023 Q4', '2024 Q1'],
+                datasets: [{
+                    label: 'Ternary Cypress Fund',
+                    data: [100, 105.2, 110.8, 118.3, 124.5, 132.1, 138.7, 146.2, 154.8],
+                    borderColor: '#003366',
+                    backgroundColor: 'rgba(0, 51, 102, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Fund Performance (Indexed to 100 at Inception)'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Indexed Value'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Comparative Chart
+        const comparativeCtx = document.getElementById('comparativeChart').getContext('2d');
+        const comparativeChart = new Chart(comparativeCtx, {
+            type: 'line',
+            data: {
+                labels: ['2022', '2023', '2024'],
+                datasets: [
+                    {
+                        label: 'Ternary Cypress Fund',
+                        data: [18.5, 24.2, 16.8],
+                        borderColor: '#003366',
+                        backgroundColor: 'rgba(0, 51, 102, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'S&P 500',
+                        data: [10.8, 16.2, 12.4],
+                        borderColor: '#888888',
+                        backgroundColor: 'rgba(136, 136, 136, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'MSCI World Index',
+                        data: [9.2, 14.8, 11.2],
+                        borderColor: '#444444',
+                        backgroundColor: 'rgba(68, 68, 68, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Annual Returns Comparison (%)'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Return (%)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
