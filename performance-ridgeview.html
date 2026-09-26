@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Chart - Ternary Ridgeview Fund</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* 1. APPLY AVENIR LIGHT FONT GLOBALLY */
+        body {
+            font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
+            font-weight: 300;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow: visible; 
+            scroll-behavior: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #003366;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-weight: 500;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            font-weight: 600;
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        h4:first-of-type { margin-top: 0; }
+
+        .performance-content {
+            display: flex;
+            flex-wrap: nowrap; 
+            align-items: flex-start; 
+            gap: 20px;
+            width: 100%;
+            overflow: visible; /* Force hide scrollbars */
+            scroll-behavior: none;
+        }
+
+        .chart-container {
+            flex: 2; 
+            height: 350px; 
+            min-width: 0; 
+        }
+
+        .performance-metrics {
+            flex: 1; 
+            min-width: 220px; 
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            height: 350px; 
+            overflow-y: visible; /* Internal scroll only if absolutely needed */
+            scroll-behavior: none;
+        }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+            font-size: 14px;
+            white-space: nowrap; 
+        }
+        li:last-child { border-bottom: none; }
+        strong { font-weight: 500; color: #555; margin-right: 10px;}
+
+        @media (max-width: 600px) {
+            .container { padding: 10px; }
+            h2 { font-size: 18px; }
+            .performance-metrics { 
+                padding: 10px; 
+                min-width: 160px; 
+            }
+            li { font-size: 11px; } 
+            h4 { font-size: 10px; margin: 10px 0 5px 0;}
+            h3 { font-size: 14px; margin-bottom: 10px;}
+        }
+    </style>
+</head>
+<body>
+
+    <section class="performance-section">
+        <div class="container">
+            <h2>Historical Performance</h2>
+            <div class="performance-content">
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                
+                <div class="performance-metrics">
+                    <h3>Performance Metrics</h3>
+                    
+                    <h4>Returns</h4>
+                    <ul>
+                        <li><strong>ROI YTD:</strong> 18.5%</li>
+                        <li><strong>ROI Since Inception:</strong> 30.65%</li>
+                    </ul>
+
+                    <h4>Risk & Analytics</h4>
+                    <ul>
+                        <li><strong>Volatility:</strong> 4.58%</li>
+                        <li><strong>Sharpe Ratio:</strong> 1.88</li>
+                        <li><strong>Monthly Drawdown:</strong> -1.37%</li>
+                        <li><strong>% Positive Month:</strong> 80%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        Chart.defaults.font.family = "'Avenir', 'Avenir Next', 'Segoe UI', sans-serif";
+        Chart.defaults.font.weight = '300';
+        Chart.defaults.color = '#666';
+
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        const performanceChart = new Chart(performanceCtx, {
+            type: 'line',
+            data: {
+                // REMOVED '2025 Nov'
+                labels: [
+                    'Inception', '2023 Q2', '2023 Q3', '2023 Q4', 
+                    '2024 Q1', '2024 Q2', '2024 Q3', '2024 Q4', 
+                    '2025 Q1', '2025 Q2', '2025 Q3'
+                ],
+                datasets: [
+                {
+                    label: 'Ternary Ridgeview Fund',
+                    // REMOVED Last Data Point
+                    data: [
+                        100,        // Inception (May)
+                        100.9306,   // Jun 23 (Q2)
+                        100.2887,   // Sep 23 (Q3)
+                        99.7611,    // Dec 23 (Q4)
+                        105.8100,   // Mar 24 (Q1)
+                        112.8468,   // Jun 24 (Q2)
+                        112.0889,   // Sep 24 (Q3)
+                        115.3085,   // Dec 24 (Q4)
+                        117.3077,   // Mar 25 (Q1)
+                        120.4736,   // Jun 25 (Q2)
+                        126.6740    // Sep 25 (Q3)
+                    ],
+                    borderColor: '#003366',
+                    backgroundColor: 'rgba(0, 51, 102, 0.1)',
+                    pointBackgroundColor: '#003366', 
+                    pointBorderColor: '#003366',
+                    tension: 0.4,
+                    fill: true,
+                    borderWidth: 2,
+                    pointRadius: 3, 
+                    pointHoverRadius: 6
+                }, 
+                {
+                    label: 'Asia Hedge Fund Index',
+                    // REMOVED Last Data Point
+                    data: [
+                        100,        // Inception
+                        101.0834,   // Jun 23
+                        99.5969,    // Sep 23
+                        101.9931,   // Dec 23
+                        104.7509,   // Mar 24
+                        106.2695,   // Jun 24
+                        111.4713,   // Sep 24
+                        111.2673,   // Dec 24
+                        112.4696,   // Mar 25
+                        116.9490,   // Jun 25
+                        125.0117    // Sep 25
+                    ],
+                    borderColor: '#999999',
+                    backgroundColor: 'transparent',
+                    pointBackgroundColor: '#999999',
+                    pointBorderColor: '#999999',
+                    borderDash: [5, 5],
+                    tension: 0.4,
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Fund Performance (Indexed to 100)',
+                        font: { size: 14, weight: 400 }
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: { 
+                            usePointStyle: true,
+                            boxWidth: 8, 
+                            boxPadding: 15,
+                            padding: 30,
+                            font: { size: 12, family: 'Avenir' }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 51, 102, 0.9)',
+                        titleFont: { family: 'Avenir', size: 13 },
+                        bodyFont: { family: 'Avenir', size: 12 },
+                        mode: 'index',
+                        intersect: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: { color: '#f0f0f0' },
+                        title: { display: false }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 6 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

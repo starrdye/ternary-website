@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Chart - Ternary Cypress Fund</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <section class="comparative-section">
+        <div class="container">
+            <h2>Comparative Analysis</h2>
+            <div class="chart-container">
+                <canvas id="comparativeChart"></canvas>
+            </div>
+            <div class="comparative-note">
+                <p>Comparison against S&P 500 and MSCI World Index</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Comparative Chart
+        const comparativeCtx = document.getElementById('comparativeChart').getContext('2d');
+        const comparativeChart = new Chart(comparativeCtx, {
+            type: 'line',
+            data: {
+                labels: ['2022', '2023', '2024'],
+                datasets: [
+                    {
+                        label: 'Ternary Cypress Fund',
+                        data: [18.5, 24.2, 16.8],
+                        borderColor: '#003366',
+                        backgroundColor: 'rgba(0, 51, 102, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'S&P 500',
+                        data: [10.8, 16.2, 12.4],
+                        borderColor: '#888888',
+                        backgroundColor: 'rgba(136, 136, 136, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'MSCI World Index',
+                        data: [9.2, 14.8, 11.2],
+                        borderColor: '#444444',
+                        backgroundColor: 'rgba(68, 68, 68, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Annual Returns Comparison (%)'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Return (%)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Stats - Ternary Ridgeview Fund</title>
+    <style>
+        /* 1. GLOBAL STYLES */
+        body {
+            font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
+            font-weight: 300;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background: transparent;
+            overflow: hidden; /* Disable Scroll */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 2. HEADINGS */
+        h2 {
+            font-weight: 400; 
+            color: #003366;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 24px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* 3. STRICT 3-COLUMN GRID */
+        .stats-grid {
+            display: grid;
+            /* CHANGED: Forces exactly 3 columns of equal width (1fr) */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* 4. CARD STYLING & TEXT CONTAINMENT */
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 4px; 
+            border-top: 3px solid #003366; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+            text-align: center;
+            transition: transform 0.2s ease;
+            
+            /* CHANGED: Ensures text stays inside */
+            overflow: hidden; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            min-width: 0; /* Critical for grid text wrapping */
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* 5. TYPOGRAPHY */
+        .stat-card h3 {
+            font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
+            font-weight: 500; 
+            font-size: 13px;
+            color: #666; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 10px 0;
+        }
+
+        .stat-value {
+            font-family: 'Avenir', 'Avenir Next', 'Segoe UI', sans-serif;
+            font-weight: 300; 
+            font-size: 28px;
+            color: #003366; 
+            margin: 0;
+            line-height: 1.2; /* Better spacing for wrapped text */
+        }
+
+        /* OPTIONAL: Stack on mobile phones only if screen is extremely small */
+        @media (max-width: 500px) {
+             .stat-value { font-size: 20px; } /* Shrink font on tiny screens */
+             .stat-card { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="fund-stats-section">
+        <div class="container">
+            <h2>Key Fund Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Fund Size</h3>
+                    <p class="stat-value">$73M</p> </div>
+                <div class="stat-card">
+                    <h3>Management Fee</h3>
+                    <!-- Standard Participating Shares -->
+                    <p class="stat-value">1%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Performance Fee</h3>
+                    <p class="stat-value">10%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Number of Funds</h3>
+                    <p class="stat-value">12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>NAV Frequency</h3>
+                    <p class="stat-value">Monthly</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Fund Inception</h3>
+                    <p class="stat-value">MAR-2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
